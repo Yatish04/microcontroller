@@ -1,0 +1,90 @@
+A51 MACRO ASSEMBLER  CALCI                                                                08/23/2018 10:48:14 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN calci.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE calci.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+  0008                 2             NUM1 EQU 08H
+  0008                 3             NUM2 EQU 08H
+0000 7B11              4             MOV R3,#11H
+0002 BB0002            5                     CJNE R3,#00H,SKIP1
+0005 800C              6                     SJMP ADD1
+0007                   7                     SKIP1:
+0007 BB0102            8                     CJNE R3,#01H,SKIP2
+000A 8018              9                     SJMP SUB1
+000C                  10                     SKIP2:
+000C BB1002           11                     CJNE R3,#10H,SKIP3
+000F 8024             12                     SJMP MUL1
+0011                  13                     SKIP3:
+0011 802B             14                     SJMP DIV1
+                      15     
+0013                  16             ADD1:
+0013 C3               17                     CLR C
+0014 7408             18                     MOV A,#NUM1
+0016 3408             19                     ADDC A,#NUM2
+0018 5005             20                     JNC SKIPA
+001A 75F001           21                     MOV B,#01H
+001D 8028             22                     SJMP STOP
+001F                  23                     SKIPA:
+001F 75F000           24                             MOV B,#00H
+0022 8023             25                     SJMP STOP
+                      26     
+0024                  27             SUB1:
+0024 C3               28                     CLR C
+0025 7408             29                     MOV A,#NUM1
+0027 9408             30                     SUBB A,#NUM2
+0029 5005             31                     JNC SKIPS
+002B 75F001           32                     MOV B,#01H
+002E 8017             33                     SJMP STOP
+0030                  34                     SKIPS:
+0030 75F000           35                             MOV B,#00H
+0033 8012             36                     SJMP STOP
+                      37     
+                      38     
+0035                  39             MUL1:
+0035 C3               40                     CLR C
+0036 7408             41                     MOV A,#NUM1
+0038 75F008           42                     MOV B,#NUM2
+003B A4               43                     MUL AB
+003C 8009             44                     SJMP STOP
+                      45     
+003E                  46             DIV1:
+003E C3               47                     CLR C
+003F 7408             48                     MOV A,#NUM1
+0041 75F008           49                     MOV B,#NUM2
+0044 84               50                     DIV AB
+0045 8000             51                     SJMP STOP
+                      52                     
+0047 80FE             53             STOP: SJMP $
+                      54     END
+A51 MACRO ASSEMBLER  CALCI                                                                08/23/2018 10:48:14 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+ADD1 . . . . . . .  C ADDR   0013H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+DIV1 . . . . . . .  C ADDR   003EH   A   
+MUL1 . . . . . . .  C ADDR   0035H   A   
+NUM1 . . . . . . .  N NUMB   0008H   A   
+NUM2 . . . . . . .  N NUMB   0008H   A   
+SKIP1. . . . . . .  C ADDR   0007H   A   
+SKIP2. . . . . . .  C ADDR   000CH   A   
+SKIP3. . . . . . .  C ADDR   0011H   A   
+SKIPA. . . . . . .  C ADDR   001FH   A   
+SKIPS. . . . . . .  C ADDR   0030H   A   
+STOP . . . . . . .  C ADDR   0047H   A   
+SUB1 . . . . . . .  C ADDR   0024H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,51 @@
+A51 MACRO ASSEMBLER  SEARCH                                                               08/16/2018 09:35:33 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN search.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE search.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     org 0000H
+  0020                 2             N EQU 20H
+0000 900017            3             MOV DPTR,#NUMS
+0003 7A05              4             MOV R2,#5
+0005 7B00              5             MOV R3,#0
+0007                   6             REP:
+0007 7400              7             MOV A,#0H
+0009 93                8             MOVC A,@A+DPTR
+000A FD                9             MOV R5,A
+000B A3               10             INC DPTR
+000C DA02             11             DJNZ R2,CMP
+000E 80FE             12             CONT2: SJMP CONT2
+                      13             
+0010                  14             CMP:
+0010 B420F4           15             CJNE A,#N,REP
+0013 7B01             16             MOV R3,#1
+0015 80FE             17             CONT1: SJMP CONT1
+                      18             
+                      19             
+0017 10203040         20             NUMS: DB 10H,20H,30H,40H,50H
+001B 50                      
+                      21     END
+A51 MACRO ASSEMBLER  SEARCH                                                               08/16/2018 09:35:33 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CMP. . . . . . . .  C ADDR   0010H   A   
+CONT1. . . . . . .  C ADDR   0015H   A   
+CONT2. . . . . . .  C ADDR   000EH   A   
+N. . . . . . . . .  N NUMB   0020H   A   
+NUMS . . . . . . .  C ADDR   0017H   A   
+REP. . . . . . . .  C ADDR   0007H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

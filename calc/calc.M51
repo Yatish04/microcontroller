@@ -1,0 +1,90 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/23/2018  10:48:14  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE calci.obj TO calc RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  calci.obj (CALCI)
+
+
+LINK MAP OF MODULE:  calc (CALCI)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0049H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  calc (CALCI)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        CALCI
+  C:0013H         SYMBOL        ADD1
+  D:00F0H         SYMBOL        B
+  C:003EH         SYMBOL        DIV1
+  C:0035H         SYMBOL        MUL1
+  N:0008H         SYMBOL        NUM1
+  N:0008H         SYMBOL        NUM2
+  C:0007H         SYMBOL        SKIP1
+  C:000CH         SYMBOL        SKIP2
+  C:0011H         SYMBOL        SKIP3
+  C:001FH         SYMBOL        SKIPA
+  C:0030H         SYMBOL        SKIPS
+  C:0047H         SYMBOL        STOP
+  C:0024H         SYMBOL        SUB1
+  C:0000H         LINE#         4
+  C:0002H         LINE#         5
+  C:0005H         LINE#         6
+  C:0007H         LINE#         8
+  C:000AH         LINE#         9
+  C:000CH         LINE#         11
+  C:000FH         LINE#         12
+  C:0011H         LINE#         14
+  C:0013H         LINE#         17
+  C:0014H         LINE#         18
+  C:0016H         LINE#         19
+  C:0018H         LINE#         20
+  C:001AH         LINE#         21
+  C:001DH         LINE#         22
+  C:001FH         LINE#         24
+  C:0022H         LINE#         25
+  C:0024H         LINE#         28
+BL51 BANKED LINKER/LOCATER V6.22                                                      08/23/2018  10:48:14  PAGE 2
+
+
+  C:0025H         LINE#         29
+  C:0027H         LINE#         30
+  C:0029H         LINE#         31
+  C:002BH         LINE#         32
+  C:002EH         LINE#         33
+  C:0030H         LINE#         35
+  C:0033H         LINE#         36
+  C:0035H         LINE#         40
+  C:0036H         LINE#         41
+  C:0038H         LINE#         42
+  C:003BH         LINE#         43
+  C:003CH         LINE#         44
+  C:003EH         LINE#         47
+  C:003FH         LINE#         48
+  C:0041H         LINE#         49
+  C:0044H         LINE#         50
+  C:0045H         LINE#         51
+  C:0047H         LINE#         53
+  -------         ENDMOD        CALCI
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0049H BYTE ( 3%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=73
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

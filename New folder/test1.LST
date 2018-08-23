@@ -1,0 +1,63 @@
+A51 MACRO ASSEMBLER  TEST1                                                                08/16/2018 10:15:26 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN test1.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE test1.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+  0010                 2     RESULT EQU 10H
+  0020                 3     SEARCH EQU 20H
+  0050                 4     STORE EQU 50H
+0000 900021            5     MOV DPTR, #NUMS
+0003 7850              6     MOV R0,#STORE
+0005 7B05              7     MOV R3,#5
+                       8     
+0007                   9     LOOP:
+0007 7400             10     MOV A ,#0H
+0009 93               11     MOVC A,@A+DPTR
+000A F6               12     MOV @R0,A
+000B 08               13     INC R0
+000C A3               14     INC DPTR
+000D DBF8             15     DJNZ R3,LOOP
+                      16     
+000F 7850             17     MOV R0,#STORE
+0011 7B05             18     MOV R3,#5
+0013                  19     LOOP1:
+0013 E6               20     MOV A,@R0
+0014 08               21     INC R0
+0015 DB02             22     DJNZ R3, CMP
+0017 80FE             23     CONT: SJMP CONT
+0019                  24     CMP:
+0019 B420F7           25     CJNE A,#SEARCH,LOOP1
+001C 751001           26     MOV RESULT,#1
+001F 80FE             27     CONT1: SJMP CONT1
+                      28     
+0021 10203040         29     NUMS: DB 10H,20H,30H,40H,50H
+0025 50                      
+                      30     END
+A51 MACRO ASSEMBLER  TEST1                                                                08/16/2018 10:15:26 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CMP. . . . . . . .  C ADDR   0019H   A   
+CONT . . . . . . .  C ADDR   0017H   A   
+CONT1. . . . . . .  C ADDR   001FH   A   
+LOOP . . . . . . .  C ADDR   0007H   A   
+LOOP1. . . . . . .  C ADDR   0013H   A   
+NUMS . . . . . . .  C ADDR   0021H   A   
+RESULT . . . . . .  N NUMB   0010H   A   
+SEARCH . . . . . .  N NUMB   0020H   A   
+STORE. . . . . . .  N NUMB   0050H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

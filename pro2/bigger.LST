@@ -1,0 +1,60 @@
+A51 MACRO ASSEMBLER  BIGGER                                                               08/16/2018 11:15:52 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN bigger.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE bigger.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+  0020                 2             RESULT EQU 20H  
+0000 90001E            3             MOV DPTR,#NUM1
+0003 7400              4             MOV A,#0H
+0005 93                5             MOVC A,@A+DPTR
+0006 FB                6             MOV R3,A
+                       7             
+0007 90001F            8             MOV DPTR,#NUM2
+000A 7400              9             MOV A,#0H
+000C 93               10             MOVC A,@A+DPTR
+                      11             
+000D 8B10             12             MOV 10H,R3
+                      13             
+000F B51000           14             CJNE A,10H, LOC1
+                      15             
+0012                  16             LOC1:
+0012 5004             17                     JNC SIP
+0014 8B20             18             MOV RESULT,R3
+0016 8004             19             SJMP CONT
+                      20             
+0018                  21             SIP:
+0018 F520             22             MOV RESULT,A
+001A 8000             23             SJMP CONT
+                      24             
+                      25             
+                      26             
+001C 80FE             27             CONT: SJMP CONT
+                      28             
+001E 20               29             NUM1: DB 20H
+001F 10               30                     NUM2: DB 10H            
+                      31     END
+A51 MACRO ASSEMBLER  BIGGER                                                               08/16/2018 11:15:52 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+CONT . . . . . . .  C ADDR   001CH   A   
+LOC1 . . . . . . .  C ADDR   0012H   A   
+NUM1 . . . . . . .  C ADDR   001EH   A   
+NUM2 . . . . . . .  C ADDR   001FH   A   
+RESULT . . . . . .  N NUMB   0020H   A   
+SIP. . . . . . . .  C ADDR   0018H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

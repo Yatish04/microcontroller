@@ -1,0 +1,58 @@
+A51 MACRO ASSEMBLER  CALC                                                                 08/20/2018 16:29:28 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN calc.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE calc.asm SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+  0010                 1     option equ 10h
+  0000                 2     ad equ 00h
+  0001                 3     su equ 01h
+  0010                 4     mu equ 10h
+  0011                 5     di equ 11h      
+0000                   6     org 0000h
+0000 7800              7             mov r0,#ad
+0002 7901              8             mov r1,#su
+0004 7A10              9             mov r2,#mu
+0006 7B11             10             mov r3,#di
+0008 7D10             11             mov r5,#10h
+000A 7405             12             mov a,#5h
+                      13             
+000C B81003           14             cjne r0,#option,l2
+000F 2D               15             add a,r5
+0010 80FE             16             sjmp $
+0012                  17             l2:
+0012 B91003           18             cjne r1,#option,l3
+0015 9D               19             subb a,r5
+0016 80FE             20             sjmp $
+0018 BA1005           21                     l3:cjne r2,#option,l5
+001B 89F0             22             mov b,r1
+001D A4               23             mul ab
+001E 80FE             24             sjmp $
+0020                  25                     l5:
+                      26                     end
+A51 MACRO ASSEMBLER  CALC                                                                 08/20/2018 16:29:28 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+AD . . . . . . . .  N NUMB   0000H   A   
+B. . . . . . . . .  D ADDR   00F0H   A   
+DI . . . . . . . .  N NUMB   0011H   A   
+L2 . . . . . . . .  C ADDR   0012H   A   
+L3 . . . . . . . .  C ADDR   0018H   A   
+L5 . . . . . . . .  C ADDR   0020H   A   
+MU . . . . . . . .  N NUMB   0010H   A   
+OPTION . . . . . .  N NUMB   0010H   A   
+SU . . . . . . . .  N NUMB   0001H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
