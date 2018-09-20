@@ -1,0 +1,52 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/20/2018  10:37:30  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE STARTUP.obj TO conv1 RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (STARTUP)
+
+
+LINK MAP OF MODULE:  conv1 (STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0022H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  conv1 (STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        STARTUP
+  C:0012H         SYMBOL        TABLE
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0003H         LINE#         4
+  C:0006H         LINE#         6
+  C:0008H         LINE#         7
+  C:0009H         LINE#         8
+  C:000AH         LINE#         10
+  C:000BH         LINE#         11
+  C:000DH         LINE#         12
+  C:000EH         LINE#         13
+  C:000FH         LINE#         14
+  C:0010H         LINE#         23
+  -------         ENDMOD        STARTUP
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0022H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=34
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

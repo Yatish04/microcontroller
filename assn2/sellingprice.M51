@@ -1,0 +1,60 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        08/30/2018  11:35:50  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE selling.obj TO sellingprice RAMSIZE (256)
+
+
+INPUT MODULES INCLUDED:
+  selling.obj (SELLING)
+
+
+LINK MAP OF MODULE:  sellingprice (SELLING)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0105H     ABSOLUTE     
+
+
+
+SYMBOL TABLE OF MODULE:  sellingprice (SELLING)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        SELLING
+  D:00F0H         SYMBOL        B
+  C:0019H         SYMBOL        CONT
+  C:000CH         SYMBOL        LOOP
+  C:0100H         SYMBOL        SELL
+  C:0000H         LINE#         2
+  C:0002H         LINE#         3
+  C:0005H         LINE#         4
+  C:0007H         LINE#         5
+  C:0009H         LINE#         6
+  C:000CH         LINE#         9
+  C:000EH         LINE#         10
+  C:000FH         LINE#         11
+  C:0010H         LINE#         12
+  C:0011H         LINE#         13
+  C:0012H         LINE#         14
+  C:0013H         LINE#         15
+  C:0014H         LINE#         16
+  C:0016H         LINE#         17
+  C:0017H         LINE#         18
+  C:0018H         LINE#         19
+  C:0019H         LINE#         21
+  -------         ENDMOD        SELLING
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0020H BYTE ( 1%) *
+******************************************************************************
+
+Program Size: data=8.0 xdata=0 code=261
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

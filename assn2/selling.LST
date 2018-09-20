@@ -1,0 +1,54 @@
+A51 MACRO ASSEMBLER  SELLING                                                              08/30/2018 11:35:50 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN selling.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE selling.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7840              2             MOV R0,#40H
+0002 900100            3             MOV DPTR,#SELL
+0005 7E00              4             MOV R6,#00
+0007 7B05              5             MOV R3,#5
+0009 75F005            6             MOV B,#5
+                       7             
+000C                   8             LOOP:
+000C 7400              9                     MOV A,#00H
+000E 93               10                     MOVC A,@A+DPTR
+000F 96               11                     SUBB A,@R0
+0010 2E               12                     ADD A,R6
+0011 FE               13                     MOV R6,A
+0012 A3               14                     INC DPTR
+0013 08               15                     INC R0
+0014 DBF6             16                     DJNZ R3,LOOP    
+0016 EE               17     MOV A,R6
+0017 84               18     DIV AB
+0018 FE               19     MOV R6,A
+                      20     
+0019 80FE             21     CONT: SJMP $
+                      22             
+                      23     
+0100                  24     ORG 0100H
+0100 10203040         25             SELL: DB 10H,20H,30H,40H,50H
+0104 50                      
+                      26     END
+A51 MACRO ASSEMBLER  SELLING                                                              08/30/2018 11:35:50 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+CONT . . . . . . .  C ADDR   0019H   A   
+LOOP . . . . . . .  C ADDR   000CH   A   
+SELL . . . . . . .  C ADDR   0100H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  PROG                                                                 09/20/2018 10:09:24 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN prog.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE prog.a51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 79FF              2             MOV R1,#0FFH
+0002 7820              3             MOV R0,#20H
+0004 75F00A            4             MOV B,#10
+0007 E9                5             MOV A,R1
+                       6             
+0008 84                7             DIV AB
+0009 A6F0              8             MOV @R0,B
+000B 08                9             INC R0
+                      10             
+000C 75F00A           11             MOV B,#10
+                      12     
+000F 84               13             DIV AB
+0010 A6F0             14             MOV @R0,B
+0012 08               15             INC R0
+                      16             
+0013 75F00A           17             MOV B,#10
+                      18     
+0016 84               19             DIV AB
+0017 A6F0             20             MOV @R0,B
+                      21             
+0019 80FE             22             SJMP $
+                      23     END
+A51 MACRO ASSEMBLER  PROG                                                                 09/20/2018 10:09:24 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

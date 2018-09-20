@@ -1,0 +1,12 @@
+ORG 0000H
+	MOV R4,#N
+	MOV DPTR,#NUMS
+	MOV R2,#00H
+	
+	LOOP:
+	
+	
+	
+	NUMS: DB 10,20,30,40,50,60
+	SJMP $
+END

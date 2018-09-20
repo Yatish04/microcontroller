@@ -1,0 +1,53 @@
+A51 MACRO ASSEMBLER  STARTUP                                                              09/20/2018 10:37:30 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.02b
+OBJECT MODULE PLACED IN STARTUP.OBJ
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE STARTUP.A51 SET(SMALL) DEBUG EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 0000H
+0000 7CFF              2             MOV R4,#0FFH
+0002 EC                3             MOV A,R4
+0003 900012            4             MOV DPTR,#TABLE
+                       5             
+0006 540F              6             ANL A,#0FH
+0008 93                7             MOVC A,@A+DPTR
+0009 FA                8             MOV R2,A         
+                       9             
+000A EC               10             MOV A,R4
+000B 54F0             11             ANL A,#0F0H
+000D C4               12             SWAP A
+000E 93               13             MOVC A,@A+DPTR
+000F FB               14             MOV R3,A  
+                      15             
+                      16             
+                      17     
+                      18             
+                      19             
+                      20                     
+                      21             
+                      22             
+0010 80FE             23     SJMP $
+0012 30313233         24             TABLE: DB '0123456789ABCDEF'
+0016 34353637                
+001A 38394142                
+001E 43444546                
+                      25     
+                      26     END
+A51 MACRO ASSEMBLER  STARTUP                                                              09/20/2018 10:37:30 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+TABLE. . . . . . .  C ADDR   0012H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
